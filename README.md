@@ -1,2 +1,2 @@
 # chatgpt-Clone
-Chatgpt-clone built on MERN framework and use openai api. See it live at -
+Chatgpt-clone built on MERN framework and use openai api. See it working at -
