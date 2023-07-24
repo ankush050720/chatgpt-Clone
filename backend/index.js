@@ -9,12 +9,22 @@ const configuration = new Configuration({
 });
 const openai = new OpenAIApi(configuration);
 
+const frontendDomain = 'https://ankj-chatgpt-client.onrender.com';
+const corsOptions = {
+  origin: frontendDomain,
+};
 
 const app = express() ;
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({extended : true}))
 const port = 3080 ;
+
+
+app.get('https://ankj-chatgpt-clone.onrender.com/' , async (req, res) => {
+   res.send("Everything is working fine") ;
+});
+
 
 app.post('https://ankj-chatgpt-clone.onrender.com/' , async (req , res) =>{
     const {message , currentModel} = req.body ;
