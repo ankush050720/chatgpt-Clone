@@ -91,7 +91,7 @@ function App(props) {
   }
 
   function getEngines() {
-    fetch("http://localhost:3080/models")
+    fetch("https://ankj-chatgpt-clone.onrender.com/models")
       .then((res) => res.json())
       .then((data) => {
         data.models.forEach((element) => {
