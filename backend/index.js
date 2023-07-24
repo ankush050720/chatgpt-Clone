@@ -21,12 +21,12 @@ app.use(express.urlencoded({extended : true}))
 const port = 3080 ;
 
 
-app.get('https://ankj-chatgpt-clone.onrender.com/' , async (req, res) => {
+app.get('/' , async (req, res) => {
    res.send("Everything is working fine") ;
 });
 
 
-app.post('https://ankj-chatgpt-clone.onrender.com/' , async (req , res) =>{
+app.post('/' , async (req , res) =>{
     const {message , currentModel} = req.body ;
     console.log(message , "message") ;
     console.log(currentModel , "currentModel") ;
@@ -64,7 +64,7 @@ app.post('https://ankj-chatgpt-clone.onrender.com/' , async (req , res) =>{
 });
 
 
-app.get('https://ankj-chatgpt-clone.onrender.com/models' , async (req , res) =>{
+app.get('/models' , async (req , res) =>{
     const response = await openai.listModels();
     // console.log(response.data.data) ;
     res.json({
