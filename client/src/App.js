@@ -37,7 +37,7 @@ function App(props) {
   function clearChat() {
     setChatLog([{
       user : "gpt" , 
-      message : "Hello ${profileName}! How can I assist you today?"
+      message : "Hello! How can I assist you today?"
     }]);
   }
 
@@ -91,7 +91,7 @@ function App(props) {
   }
 
   function getEngines() {
-    fetch("https://ankj-chatgpt-clone.onrender.com/models")
+    fetch("https://ankj-chatgpt-clone.onrender.com/models/")
       .then((res) => res.json())
       .then((data) => {
         data.models.forEach((element) => {
