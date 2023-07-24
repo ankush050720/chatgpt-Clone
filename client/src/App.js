@@ -114,7 +114,7 @@ function App(props) {
     setInput("");
     setChatLog(chatLogNew);
 
-    const response = await fetch("http://localhost:3080/", {
+    const response = await fetch("https://ankj-chatgpt-clone.onrender.com/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
